@@ -18,6 +18,11 @@ class Pet:
     def set_owner(self, owner):
         self.__owner=owner
 
+    def change_owner(self,newname):
+        print (f'You would like to change owner from {self.__owner} to {newname}?')
+        self.set_owner(newname)
+        print(f' My new owner is {self.get_owner()}')
+
     def sound(self):
         pass
 
@@ -106,6 +111,5 @@ pet1.owner()
 pet1.name="Lu"
 print(pet1)
 # pet1.owner="Bob"  # ! can't change this attribute
-pet1.set_owner("Bob") # changing owner's name
-pet1.owner()
-print(pet1.sound())
+pet1.change_owner("Bob") # changing owner's name
+print(dog1.__dict__)
